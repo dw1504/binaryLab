@@ -1,0 +1,20 @@
+//Implement a C function called ex3 such that it achieves 
+//the same functionality as the machine code of objs/ex3_sol.o
+//Note: you need to figure out ex3()'s function signature yourself; 
+//the signature is not void ex3()
+  
+#include <assert.h>
+
+char*
+ex3(char *array, int numberOfSwap, int swapIndex) {
+	int count = 0;
+	while(count <= numberOfSwap){
+		char temp = array[count];
+		char temp1 = array[count+swapIndex];
+		array[count] = temp1;
+		array[count+swapIndex] = temp;
+		count++;
+	}
+	return array;
+	//assert(0);
+}
